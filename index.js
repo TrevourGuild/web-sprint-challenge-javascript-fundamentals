@@ -35,6 +35,8 @@ function summation(num) {
  }
  return sum; 
 }
+
+console.log("task 2:", summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -59,10 +61,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(){
-    /*Your Code Here*/
+  function animalNames(data){
+    const displayNames = [];
+    data.forEach(function(array){
+      return displayNames.push(`name: ${array.animal_name}, scientific: ${array.scientific_name}`);
+    });
+    return displayNames;
   }
-  
+
+  console.log("request 1:",animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -70,9 +77,14 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(data){
+    const newArray = data.map(function(item){
+      return item.animal_name.toLowerCase();
+    });
+    return newArray;
   }
+
+  console.log("request 2:", lowerCaseNames(zooAnimals));
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -80,9 +92,16 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(data){
+     const animalPop = data.filter(function(item){
+      if(item.population < 5){
+        return data;
+      }
+    })
+    return animalPop;
   }
+
+  console.log("request 3:", lowPopulationAnimals(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
