@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// The nested function can acces the variable internal because that function is inside of my function. Because of this there are local variables that can be accessed allowing internal to be console.logged. Internal of course being a local variable.
 
 
 
@@ -28,10 +28,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
-  }
+function summation(num) {
+ let sum = 0; 
+ for(let i = 1; i <= num; i++){
+   sum += i;
+ }
+ return sum; 
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,7 +59,7 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
+  function animalNames(){
     /*Your Code Here*/
   }
   
